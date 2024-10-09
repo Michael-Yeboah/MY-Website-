@@ -673,31 +673,30 @@ input, textarea {
         gap: 10px;
     }
 }
+/* Your existing styles */
+body {
+    font-size: 1.2rem;
+}
+
+/* Add media queries for responsiveness */
 @media (max-width: 768px) {
-    .full-screen {
-        height: 50vh; /* Shorter section on mobile */
+    body {
+        font-size: 1rem;
     }
-    
-    .intro-text h2 {
-        font-size: 2em; /* Smaller text */
+    .navbar {
+        padding: 10px;
     }
 }
 
 @media (max-width: 576px) {
-    .full-screen {
-        height: 40vh;
+    .navbar {
+        flex-direction: column;
     }
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
 
-    .intro-text h2 {
-        font-size: 1.5em; /* Smaller heading size */
-    }
-}
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 0px;
-}
 
 @media (max-width: 768px) {
     .portfolio-grid {
