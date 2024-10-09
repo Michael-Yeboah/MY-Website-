@@ -9,6 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <script>
+        // Theme switching functionality
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        }
+
+        // Set theme on page load based on system preference
+        function setThemeOnLoad() {
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            document.documentElement.setAttribute('data-theme', prefersDarkScheme.matches ? 'dark' : 'light');
+        }
+
+        // Call the function on page load
+        window.onload = setThemeOnLoad;
+    </script>
 </head>
 
 <body>
@@ -30,12 +47,11 @@
             <!-- Navigation Menu -->
             <ul class="nav-right" id="nav-menu">
                 <li><a href="index.html" class="nav-link"><b>Home</b></a></li>
-                <li><a href="about.html" class="nav-link" id="about-link"><b>About Me</b></a></li>
+                <li><a href="about.html" class="nav-link" id="about-link"><b>About</b></a></li>
                 <li class="dropdown">
                     <a href="portfolio.html" class="nav-link dropbtn" id="portfolio-link"><b>Portfolio</b></a>
-                    <div class="dropdown-content">
-                        <a href="web.html">Web Projects</a>
-                        <a href="design.html">Design Projects</a>
+                    <div class="">
+                        
                     </div>
                 </li>
                 <li><a href="contact.html" class="nav-link" id="contact-link"><b>Contact</b></a></li>
@@ -45,15 +61,15 @@
             <div class="nav-social-media">
                 <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
             </div>
         </nav>
 
         <div class="overlay" id="overlay">
             <div class="intro-text">
-                <a href="about.html" class="btn">Discover More</a>
-                <h2>Web Developer | Graphic Designer | Freelancer</h2>
+                <a href="about.html" class=""></a>
+                <h2></h2>
             </div>
         </div>
         
@@ -61,7 +77,7 @@
 
     <!-- Picture Section -->
     <section id="picture-section">
-        <h3>About Me</h3>
+        <h2>About Me</h2>
         <div class="picture-container">
             <img src="/Images/Michael Yeboah.jpg" alt="Your Picture" class="profile-picture">
         </div>
@@ -69,17 +85,17 @@
 
     <!-- Footer with social media links -->
     <div class="social-media-section">
-        <h3>Connect with me</h3>
+        <h3>Connect With Me</h3>
         <div class="social-media">
             <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Treadway. All Rights Reserved.</p>
+        <p>&copy; 2024 Michael Yeboah. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -112,6 +128,26 @@
             }
         });
     </script>
+
+    <body>
+        <!-- Your existing content -->
+    
+        <script>
+            // JavaScript for text reveal effect
+            document.addEventListener('scroll', function() {
+                const reveals = document.querySelectorAll('.reveal');
+                reveals.forEach(reveal => {
+                    const windowHeight = window.innerHeight;
+                    const revealTop = reveal.getBoundingClientRect().top;
+                    if (revealTop < windowHeight - 100) { // Trigger when close to view
+                        reveal.classList.add('visible'); // Add the visible class
+                    } else {
+                        reveal.classList.remove('visible'); // Optionally remove class
+                    }
+                });
+            });
+        </script>
+    </body>
     
 </body>
 </html>
