@@ -25,7 +25,36 @@
 
         // Call the function on page load
         window.onload = setThemeOnLoad;
+
+        // JavaScript for text reveal effect
+        function handleReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveal.getBoundingClientRect().top;
+                if (revealTop < windowHeight - 100) { // Trigger when close to view
+                    reveal.classList.add('visible'); // Add the visible class
+                } else {
+                    reveal.classList.remove('visible'); // Optionally remove class
+                }
+            });
+        }
+
+        document.addEventListener('scroll', handleReveal);
+        window.addEventListener('load', handleReveal); // Ensure it's triggered on load
     </script>
+    <style>
+        /* Text Reveal Effect Styles */
+        .reveal {
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Slightly move down */
+            transition: opacity 2.0s ease-out, transform 2.0s ease-out; /* Animation properties */
+        }
+
+        .reveal.visible {
+            opacity: 1; /* Visible state */
+        }
+    </style>
 </head>
 
 <body>
@@ -35,13 +64,6 @@
         <nav class="navbar" id="navbar">
             <div class="nav-left">
                 <h1>Michael Yeboah</h1> <!-- Your name on the left side -->
-            </div>
-
-            <!-- Hamburger Menu Button -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
 
             <!-- Navigation Menu -->
@@ -59,7 +81,7 @@
             <div class="nav-social-media">
                 <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://m.facebook.com/michael.yeboah.378199/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
             </div>
         </nav>
@@ -73,8 +95,8 @@
         
     </section>
 
-    <!-- Picture Section -->
-    <section id="picture-section">
+    <!-- Picture Section with Reveal Effect -->
+    <section id="picture-section" class="reveal">
         <h2>About Me</h2>
         <div class="picture-container">
             <img src="Images/Michael Yeboah.jpg" alt="Your Picture" class="profile-picture">
@@ -87,7 +109,7 @@
         <div class="social-media">
             <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://m.facebook.com/michael.yeboah.378199/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
@@ -97,15 +119,6 @@
     </footer>
 
     <script>
-        // JavaScript to toggle hamburger menu
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('is-active');
-        });
-
         // JavaScript to change navbar and overlay color on scroll
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
@@ -124,22 +137,6 @@
             if (link.getAttribute('href') === currentPage) {
                 link.classList.add('active');
             }
-        });
-    </script>
-
-    <script>
-        // JavaScript for text reveal effect
-        document.addEventListener('scroll', function() {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(reveal => {
-                const windowHeight = window.innerHeight;
-                const revealTop = reveal.getBoundingClientRect().top;
-                if (revealTop < windowHeight - 100) { // Trigger when close to view
-                    reveal.classList.add('visible'); // Add the visible class
-                } else {
-                    reveal.classList.remove('visible'); // Optionally remove class
-                }
-            });
         });
     </script>
 </body>
