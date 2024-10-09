@@ -733,3 +733,16 @@ body {
 .scrolled {
     background-color: #f0f0f0; /* Make this color noticeable */
 }
+.social-media {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons */
+    flex-direction: row; /* Default to row on larger screens */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .social-media {
+        flex-direction: row; /* Change to row layout */
+        justify-content: space-around; /* Evenly space icons */
+    }
+}
