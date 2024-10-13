@@ -111,8 +111,8 @@ body {
 }
 
 .full-screen {
+  background-image: url("/Images/Rashford.jpg"); /* Background image */
   height: 100vh; /* Full height of the viewport */
-  background-image: url("/Images/pexels-wisdomsky-1673973.jpg"); /* Background image */
   background-repeat: no-repeat; /* No repeat */
   background-position: center; /* Center the image */
   background-size: cover; /* Cover the entire screen */
@@ -235,7 +235,7 @@ footer {
 
 .full-screen {
   height: 100vh;
-  background: url("your-background-image.jpg") no-repeat center center/cover;
+  background: url("/Images/your-picture.jpg") no-repeat center center/cover;
 }
 
 .btn {
