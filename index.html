@@ -63,30 +63,6 @@
       document.addEventListener("scroll", handleReveal);
       window.addEventListener("load", handleReveal); // Ensure it's triggered on load
     </script>
-    <style>
-      /* Background image for the home section */
-      #home {
-        background-image: url(Images/pexels-polina-zimmerman-3747266.jpg); /* Change this path */
-        background-size: cover; /* Cover the entire section */
-        background-position: center; /* Center the background image */
-        height: 100vh; /* Full height */
-        display: flex; /* Center content */
-        flex-direction: column; /* Arrange children vertically */
-        justify-content: center; /* Center children vertically */
-        align-items: center; /* Center children horizontally */
-      }
-
-      /* Text Reveal Effect Styles */
-      .reveal {
-        opacity: 0; /* Initially hidden */
-        transform: translateY(20px); /* Slightly move down */
-        transition: opacity 2s ease-out, transform 2s ease-out; /* Animation properties */
-      }
-
-      .reveal.visible {
-        opacity: 1; /* Visible state */
-      }
-    </style>
   </head>
 
   <body>
