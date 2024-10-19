@@ -124,7 +124,6 @@ body {
 
 .overlay {
   background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  opacity: 50%;
   position: absolute;
   top: 0;
   left: 0;
@@ -233,7 +232,7 @@ footer {
   font-weight: bold; /* To ensure the bold font on navigation links */
 }
 #home {
-  background-image: url("Images/Rashford.jpg");
+  background-image: url("Images/pexels-wisdomsky-1673973.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -451,6 +450,17 @@ h3 {
     align-items: center; /* Center items */
   }
 }
+/* Full-Screen Section */
+.full-screen {
+  height: 70vh; /* Height of the section */
+  background: url("/Images/your-picture.jpg") no-repeat center center/cover; /* Adjust as needed */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
