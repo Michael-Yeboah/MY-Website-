@@ -280,13 +280,6 @@ h3 {
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: "Quicksand", Helvetica, sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
 /* Navbar Styles */
 .navbar {
   position: fixed;
@@ -457,17 +450,6 @@ body {
     align-items: center; /* Center items */
   }
 }
-/* Full-Screen Section */
-.full-screen {
-  height: 70vh; /* Height of the section */
-  background: url("/Images/your-picture.jpg") no-repeat center center/cover; /* Adjust as needed */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
