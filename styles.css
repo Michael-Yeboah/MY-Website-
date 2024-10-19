@@ -124,6 +124,7 @@ body {
 
 .overlay {
   background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  opacity: 50%;
   position: absolute;
   top: 0;
   left: 0;
